@@ -66,7 +66,7 @@ int main(int argc, char **argv) {
 
     }
 
-    // sortTracked();
+    sortTracked();
 
     for(i = 0; i < MAXWORDSTRACKED; i++){
     	if(count[i] != 0){
@@ -129,16 +129,17 @@ void sortTracked(){
 	int tempInt;
 	char tempWord[MAXWORDSIZE];
 
-
-
-for(i = 0; i<MAXWORDSTRACKED-1; i++) {
-    for(k = 0; k<MAXWORDSTRACKED-1-i; k++) {
-        if(count[k] < count[k+1]) {
-            tempInt = count[k];
-            count[k] = count[k+1];
-            count[k+1] = tempInt;
-        }
-    }
-}
+	for(i = 0; i<MAXWORDSTRACKED-1; i++) {
+    	for(k = 0; k<MAXWORDSTRACKED-1-i; k++) {
+        	if(count[k] < count[k+1]) {
+            	tempInt = count[k];
+            	strcpy(tempWord, tracked[k]);
+            	count[k] = count[k+1];
+            	strcpy(tracked[k], tracked[k+1]);
+            	count[k+1] = tempInt;
+            	strcpy(tracked[k+1], tempWord);
+        	}
+    	}
+	}	
 
 }

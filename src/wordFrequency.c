@@ -10,6 +10,7 @@
 int isLetter(char c);
 void trackWord(char* word);
 void sortTracked();
+void writeFile();
 
 char tracked[MAXWORDSTRACKED][MAXWORDSIZE];
 int count[MAXWORDSTRACKED];
@@ -40,8 +41,6 @@ int main(int argc, char **argv) {
       i++;
     } 
 
-    printf("%s\n", &in);
-
     i = 0;
     while(i < BUFFERSIZE){
     	// set word to null
@@ -67,14 +66,7 @@ int main(int argc, char **argv) {
     }
 
     sortTracked();
-
-    for(i = 0; i < MAXWORDSTRACKED; i++){
-    	if(count[i] != 0){
-    		printf("%s %d\n", &tracked[i], count[i]);
-    	}
-    }
-
-
+    writeFile();
 }
 
 int isLetter(char c) {
@@ -141,5 +133,17 @@ void sortTracked(){
         	}
     	}
 	}	
+
+}
+
+void writeFile(){
+	FILE *out = fopen("output.txt", "w+");
+	int i;
+
+	for(i = 0; i < MAXWORDSTRACKED; i++){
+    	if(count[i] != 0){
+    		fprintf(out, "%s %d\n", &tracked[i], count[i]);
+    	}
+    }
 
 }

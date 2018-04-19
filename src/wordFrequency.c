@@ -3,10 +3,13 @@
 #include <string.h>
 
 
-#define BUFFERSIZE 9999	// # of characters to be read from each file
+#define BUFFERSIZE 999999	// # of characters to be read from each file
 #define MAXWORDSIZE 15
+#define WORDSTRACKED 9999
 
 int isLetter(char c);
+
+char tracked[WORDSTRACKED][MAXWORDSIZE];
 
 int main(int argc, char **argv){
 	char in[BUFFERSIZE];	// will hold contents of file
@@ -14,6 +17,7 @@ int main(int argc, char **argv){
 	FILE *file;
 	int i, y;
 	char word[MAXWORDSIZE];
+
 
 	// initialize char array to null
 	for(i = 0; i < BUFFERSIZE; i++){
@@ -31,19 +35,23 @@ int main(int argc, char **argv){
 
     printf("%s\n", &in);
 
-    // i = 0;
-    // while(i < BUFFERSIZE){
-    // 	y=0;
-    // 	while(isLetter(in[i]) == 1){
-    // 		c = word[i];
-    // 		word[y] = c;
-    // 		y++;
-    // 		i++;
-    // 	}
-    // 	word[y] = '\0';
-    // 	i++;
-    // 	    printf("%s\n", &word);
-    // }
+    i = 0;
+    while(i < BUFFERSIZE){
+    	printf("%d: ", i);
+    	for(y = 0; y < MAXWORDSIZE; y++){
+			word[y] = '\0';
+		}
+    	y=0;
+    	while(isLetter(c = in[i]) == 1){
+    		word[y] = c;
+    		y++;
+    		i++;
+    	}
+    	i++;
+    	printf("%s\n", &word);
+
+
+    }
 
 }
 
@@ -52,7 +60,7 @@ int isLetter(char c){
 		(c >= 'A' && c <= 'Z') ||
 		(c >= 'a' && c <= 'z')){
 		return 1;
-	} else {
-		return 0;
 	}
+
+	return 0;
 }

@@ -1,0 +1,10 @@
+computer 1001
+the 49
+and 47
+georgia 35
+state 17
+university 15
+gorilla 14
+2017 13
+nasdaq 10
+nasdq500 8

@@ -1,0 +1,5 @@
+and .33 .33 .33
+for 1 0 0
+1234 .5 0 .5
+computer 0 0 1
+university 0 1 0

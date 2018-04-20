@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include <stdlib.h>
 
 #define BUFFERSIZE 999999	// # of characters to be read from each file
-#define MAXWORDSIZE 15
-#define MAXWORDSTRACKED 1000
+#define MAXWORDSIZE 25
+#define MAXWORDSTRACKED 9999
 
 void processText(FILE *file);
 int isLetter(char c);
@@ -155,19 +156,43 @@ void sortTracked(){
 
 }
 
+// initializes tracked arrays with contents of output.txt if already exists
 void initFromFile(){
 	int lineLength = MAXWORDSIZE + 10;			// used to reserve space for count after word in line
 	char line[lineLength];
+	char tempWord[MAXWORDSIZE];
+	char tempCountString[MAXWORDSIZE];
+	int tempCountInt;
+	int i, y, z;
 
 	FILE *init = fopen("output.txt", "r+");
 	if(init == '\0'){
 		return;
 	}
 
+	z = 0;
 	while (fgets(line, sizeof(line), init)) {
-        /* note that fgets don't strip the terminating \n, checking its
-           presence would allow to handle lines longer that sizeof(line) */
-        printf("%s", line); 
+        i = 0;
+        while(line[i] != ' '){		// get the word
+        	tempWord[i] = line[i];
+        	i++;
+        }
+        tempWord[i] = '\0';
+        strcpy(tracked[z], tempWord);
+
+        i++;						// get the number
+        y = 0;
+        while(line[i] != '\0'){
+        	tempCountString[y] = line[i];
+			y++;
+        	i++;
+    	}
+    	tempCountString[y] = '\0';
+        count[z] = atoi(tempCountString);	// convert string to int
+        z++;
+        wordsTracked++;
+
+
     }
 
     fclose(init);

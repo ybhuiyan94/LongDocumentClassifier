@@ -16,12 +16,13 @@ int count[MAXWORDSTRACKED];					// int array
 int wordsTracked = 0;						// current count of words in tracked array
 
 int main(int argc, char **argv) {	
-	FILE *file;
+	FILE *article = fopen(argv[1], "r");
 
-	file = fopen(argv[1], "r");
-	processText(file);
+	processText(article);
     sortTracked();
     writeFile();
+    
+    fclose(article);
 }
 
 // This function will open a text file and read it word by word,
@@ -43,7 +44,6 @@ void processText(FILE *file){
 	}
 
 	// read file and store in in[]
-	// file = fopen(argv[1], "r");
 	i = 0;
 	while((c = getc(file)) != EOF)
     {
@@ -51,6 +51,7 @@ void processText(FILE *file){
       i++;
     } 
 
+    // read contents of file word by word
     i = 0;
     while(i < BUFFERSIZE){
     	// set word to null
@@ -58,6 +59,8 @@ void processText(FILE *file){
 			word[y] = '\0';
 		}
     	y=0;
+
+    	// keep adding to word until non letter
     	while((isLetter(c = in[i]) == 1) &&
     			(y < MAXWORDSIZE-1)){
     		word[y] = c;
@@ -66,6 +69,7 @@ void processText(FILE *file){
     	}
     	i++;
 
+    	// if word is not null, convert to lowercase and track
     	if(strlen(word) != 0) {
     		for(y = 0; y < MAXWORDSIZE-1; y++)
     			word[y] = tolower(word[y]);
@@ -146,6 +150,14 @@ void sortTracked(){
 
 }
 
+// void initFromFile(){
+// 	int lineLength = MAXWORDSIZE + 10;			// used to reserve space for count after word in line
+// 	char line[lineLength];
+
+	// FILE *init = fopen("output.txt", "r");
+
+// }
+
 // Writes count to file "output.txt" with each line in
 // the format:
 // word 42
@@ -158,5 +170,7 @@ void writeFile(){
     		fprintf(out, "%s %d\n", &tracked[i], count[i]);
     	}
     }
+
+    fclose(out);
 
 }

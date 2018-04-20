@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
 #define BUFFERSIZE 999999	// # of characters to be read from each file
 #define MAXWORDSIZE 15
@@ -10,6 +11,7 @@ int isLetter(char c);
 void trackWord(char* word);
 void sortTracked();
 void writeFile();
+void initFromFile();
 
 char tracked[MAXWORDSTRACKED][MAXWORDSIZE];	// string array
 int count[MAXWORDSTRACKED];					// int array
@@ -42,6 +44,9 @@ void processText(FILE *file){
 	for(i = 0; i < BUFFERSIZE; i++){
 		in[i] = '\0';
 	}
+
+	// initialize tracking arrays
+	initFromFile();
 
 	// read file and store in in[]
 	i = 0;
@@ -150,13 +155,24 @@ void sortTracked(){
 
 }
 
-// void initFromFile(){
-// 	int lineLength = MAXWORDSIZE + 10;			// used to reserve space for count after word in line
-// 	char line[lineLength];
+void initFromFile(){
+	int lineLength = MAXWORDSIZE + 10;			// used to reserve space for count after word in line
+	char line[lineLength];
 
-	// FILE *init = fopen("output.txt", "r");
+	FILE *init = fopen("output.txt", "r+");
+	if(init == '\0'){
+		return;
+	}
 
-// }
+	while (fgets(line, sizeof(line), init)) {
+        /* note that fgets don't strip the terminating \n, checking its
+           presence would allow to handle lines longer that sizeof(line) */
+        printf("%s", line); 
+    }
+
+    fclose(init);
+
+}
 
 // Writes count to file "output.txt" with each line in
 // the format:

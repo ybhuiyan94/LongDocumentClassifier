@@ -1,7 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-#include <string.h>
-
 
 #define BUFFERSIZE 999999	// # of characters to be read from each file
 #define MAXWORDSIZE 15
@@ -13,31 +11,28 @@ void trackWord(char* word);
 void sortTracked();
 void writeFile();
 
-char tracked[MAXWORDSTRACKED][MAXWORDSIZE];
-int count[MAXWORDSTRACKED];
-int wordsTracked = 0;
+char tracked[MAXWORDSTRACKED][MAXWORDSIZE];	// string array
+int count[MAXWORDSTRACKED];					// int array
+int wordsTracked = 0;						// current count of words in tracked array
 
-int main(int argc, char **argv) {
-	
+int main(int argc, char **argv) {	
 	FILE *file;
-	
 
 	file = fopen(argv[1], "r");
 	processText(file);
-
-	
-
     sortTracked();
     writeFile();
 }
 
+// This function will open a text file and read it word by word,
+// convert each word to lowercase, and then track each word.
 void processText(FILE *file){
 	char in[BUFFERSIZE];	// will hold contents of file
 	char c; 				// used to temporarily store characters from the file
 	char word[MAXWORDSIZE];
 	int i, y;
 
-
+	// initialize count array to 0
 	for(i = 0; i < MAXWORDSTRACKED; i++){
 		count[i] = 0;
 	}
@@ -81,6 +76,7 @@ void processText(FILE *file){
     }
 }
 
+// Returns 1 if letter, 0 if not
 int isLetter(char c) {
 	if((c >= 0 && c <= 9) ||
 		(c >= 'A' && c <= 'Z') ||
@@ -128,6 +124,8 @@ void trackWord(char* word) {
 
 }
 
+// sorts the tracked strings and counts in decreasing numerical order
+// Bubble sort
 void sortTracked(){
 	int i,k;
 	int tempInt;
@@ -148,6 +146,9 @@ void sortTracked(){
 
 }
 
+// Writes count to file "output.txt" with each line in
+// the format:
+// word 42
 void writeFile(){
 	FILE *out = fopen("output.txt", "w+");
 	int i;

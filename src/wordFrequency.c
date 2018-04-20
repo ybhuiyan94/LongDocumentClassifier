@@ -7,6 +7,7 @@
 #define MAXWORDSIZE 15
 #define MAXWORDSTRACKED 1000
 
+void processText(FILE *file);
 int isLetter(char c);
 void trackWord(char* word);
 void sortTracked();
@@ -17,11 +18,25 @@ int count[MAXWORDSTRACKED];
 int wordsTracked = 0;
 
 int main(int argc, char **argv) {
+	
+	FILE *file;
+	
+
+	file = fopen(argv[1], "r");
+	processText(file);
+
+	
+
+    sortTracked();
+    writeFile();
+}
+
+void processText(FILE *file){
 	char in[BUFFERSIZE];	// will hold contents of file
 	char c; 				// used to temporarily store characters from the file
-	FILE *file;
-	int i, y;
 	char word[MAXWORDSIZE];
+	int i, y;
+
 
 	for(i = 0; i < MAXWORDSTRACKED; i++){
 		count[i] = 0;
@@ -33,7 +48,7 @@ int main(int argc, char **argv) {
 	}
 
 	// read file and store in in[]
-	file = fopen(argv[1], "r");
+	// file = fopen(argv[1], "r");
 	i = 0;
 	while((c = getc(file)) != EOF)
     {
@@ -64,9 +79,6 @@ int main(int argc, char **argv) {
 
 
     }
-
-    sortTracked();
-    writeFile();
 }
 
 int isLetter(char c) {

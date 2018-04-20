@@ -13,10 +13,21 @@ void trackWord(char* word);
 void sortTracked();
 void writeFile();
 void initFromFile();
+int isIgnored(char* word);
 
 char tracked[MAXWORDSTRACKED][MAXWORDSIZE];	// string array
 int count[MAXWORDSTRACKED];					// int array
 int wordsTracked = 0;						// current count of words in tracked array
+
+// list of words to ignore
+const char * ignored[] = {
+    "the",
+    "to",
+    "of",
+    "and",
+    "i",
+    "a"
+};
 
 int main(int argc, char **argv) {	
 	FILE *article = fopen(argv[1], "r");
@@ -105,10 +116,9 @@ void trackWord(char* word) {
 	int found = -1;
 	int i;
 
-	// return if we are at max words tracked
-	if(wordsTracked == MAXWORDSTRACKED){
+	if(isIgnored(word) == 1){
 		return;
-	}
+	}	
 
 	wordsTracked++;
 
@@ -122,8 +132,12 @@ void trackWord(char* word) {
 		i++;
 	}
 
-	if(found == -1){
-		// printf("here1");
+	if(found == -1){	// new word found
+		// return if we are at max words tracked
+		if(wordsTracked >= MAXWORDSTRACKED){
+			wordsTracked--;
+			return;
+		}
 		strcpy(tracked[wordsTracked-1], word);
 		count[wordsTracked-1]++;
 	} else {
@@ -214,4 +228,18 @@ void writeFile(){
 
     fclose(out);
 
+}
+
+// Returns 1 if word is on ignored list
+int isIgnored(char* word) {
+	int i = 0;
+	int size = sizeof(ignored)/sizeof(ignored[0]);
+
+	while(i < size) {
+		if(strcmp(word, ignored[i]) == 0){
+			return 1;
+		}
+		i++;
+	}
+	return 0;
 }

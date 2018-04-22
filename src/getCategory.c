@@ -1,37 +1,48 @@
 #include<stdio.h> 
 #include<stdlib.h> 
+#include <string.h>
+#include <math.h> 
  
-//Declaring the 3 arrays. 
-void categoryArrays(String words[],int status[], double weights[][]) 
- 
-//Declaring Variables. Number of indexes should be 15 or 1000 or 9999999? 
-int main(){ 
-  FILE *file; 
-  FILE *file2; 
-  char c; 
-  int size = 999999999; 
-  String words[size]; 
-  int status[size]; 
-  double weights[size][3]; 
-  double sum1,sum2,sum3; 
-  int size1,size2,size3; 
+//Declaring Variables.
+int main() { 
+  FILE *file;
+  FILE *file2;  
+  int i;
+  int size = 9999; 
+  int totalWords = 0;
    
-//intialize arrays to null 
-  for( int i = 0; i < size; i++){ 
-    words[i] = '\0'; 
-  } 
-  for( int j = 0; j < size; j++){ 
-    status[j] = '0'; 
-  } 
-  for( int k = 0; k < size; k++){  //will change to nested forloop for all 3 columns. 
-    weights[k] = '0.0'; 
-  } 
- 
-//open and read file 
-  fp = fopen(file, "r"); 
-  while((c = getc(file)) != EOF){ 
-    words[i] = c; 
-  } 
+//opening file and intializing arrays to null
+  file = fopen("Article1.txt","r");
+  char *words[size];
+  int index[size];
+  for(i=0;i<100;i++) {
+  words[i] = (char *)malloc(20);
+  index[i] = 0;
+  }
+  char status[20];
+//Reading the words from the file.
+  while(fscanf(file,"%s",status)==1) {
+  strcpy(words[totalWords], status);
+  totalWords++;
+  }
+  fclose(file);
+//Opening 2nd file.
+  file2 = fopen("Article2.txt","r");
+  while(fscanf(file2,"%s",status)==1) {
+//Checking if words match and assigning 1 or 0's.
+  for(i=0;i<totalWords;i++) {
+  if(strcmp(status, words[i])==0) {
+  index[i] = 1;
+  		}
+  	}
+  }
+  fclose(file2);
+//Test
+  for(i=0;i<totalWords;i++) {
+  printf("%s %d \n",words[i],index[i]);
+  }
+  return 0;
+  }
    
  
 //multiplication of 2nd and 3rd array 

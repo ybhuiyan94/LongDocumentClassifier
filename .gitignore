@@ -1,2 +1,18 @@
 
 *.stackdump
+
+bin/sportsFrequency\.txt
+
+bin/politicsFrequency\.txt
+
+bin/wordFrequency\.exe
+
+*.exe
+
+*.swp
+
+bin/moneyFrequency\.txt
+
+src/output\.txt
+
+src/weights\.txt

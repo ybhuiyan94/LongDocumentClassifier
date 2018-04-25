@@ -36,25 +36,6 @@ int main(int argc, char **argv) {
       weightVector[x][2]);
     x++;
   }
-  
-// //Reading the words from the file.
-  
-//   fclose(file);
-// //Opening 2nd file.
-//   file2 = fopen("article2.txt","r");
-//   while(fscanf(file2,"%s",status)==1) {
-// //Checking if words match and assigning 1 or 0's.
-//   for(i=0;i<totalWords;i++) {
-//   if(strcmp(status, words[i])==0) {
-//   index[i] = 1;
-//   		}
-//   	}
-//   }
-//   fclose(file2);
-// //Test
-//   for(i=0;i<totalWords;i++) {
-//   printf("%s %d \n",words[i],index[i]);
-//   }
   return 0;
 }
 

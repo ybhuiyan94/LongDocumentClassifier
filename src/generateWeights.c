@@ -1,8 +1,5 @@
 #include  <stdio.h> 
-#include  <stdlib.h> 
 #include <string.h>
-#include <math.h> 
-#include <ctype.h>
 
 #define BUFFERSIZE 999999 // # of characters to be read from each file
 #define MAXWORDSIZE 25
@@ -23,7 +20,7 @@ int main(int argc, char **argv) {
 
 	initArrays();
 
-	for(i = 1; i <= CATEGORYCOUNT; i++){
+	for(i = 1; i <= CATEGORYCOUNT; i++){	// read each file
 		in = fopen(argv[i], "r");
 		readFreqFile(in, i-1);
 	}
@@ -53,14 +50,17 @@ void readFreqFile(FILE *in, int category) {
 	int found = -1;
 	int i;
 
+	// read line by line
 	while(fscanf(in, "%s %d", &word, &freq) == 2)  {
 			for(i = 0; i < totalWords; i++) {
+				// check if we are already tracking this word
 				if(strcmp(word, trackingStrings[i]) == 0){
 					found = i;
 					break;
 				}
 			}
 
+			// put word and freq in correct locations
 			if(found == -1) {
 				strcpy(trackingStrings[totalWords], word);
 				weightVector[totalWords][category] = (double) freq;
@@ -71,15 +71,19 @@ void readFreqFile(FILE *in, int category) {
   }
 }
 
+// for each weight, frequencyInCategory/totalFrequencu
 void calculateWeights() {
 	int i, y;
 	double sum;
 
 	for(i = 0; i < totalWords; i++) {
+		// sum of each line
 		sum = 0;
 		for(y = 0; y < CATEGORYCOUNT; y++) {
 			sum += weightVector[i][y];
 		}
+
+		// calculate each weight
 		for(y = 0; y < CATEGORYCOUNT; y++) {
 			weightVector[i][y] = weightVector[i][y] / sum;
 			printf("%lf", weightVector[i][y]);

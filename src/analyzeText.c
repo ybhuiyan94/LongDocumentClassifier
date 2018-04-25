@@ -1,7 +1,5 @@
 #include  <stdio.h> 
-#include  <stdlib.h> 
 #include <string.h>
-#include <math.h> 
 #include <ctype.h>
 
 
@@ -129,6 +127,7 @@ int isLetter(char c) {
   return 0;
 }
 
+// if we are tracking that word set its status to 1 (true)
 void wordFound(char* word) {
   int x = 0;
   while(x < totalWords){

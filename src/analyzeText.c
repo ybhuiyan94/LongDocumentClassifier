@@ -10,7 +10,7 @@
 #define MAXWORDSTRACKED 9999
 #define CATEGORYCOUNT 3
 
-void initializeTracking(FILE *weights);
+void initTrackingArrays(FILE *weights);
 void readText(FILE *article);
 int isLetter(char c);
 void wordFound(char* word);
@@ -25,7 +25,7 @@ int main(int argc, char **argv) {
   FILE *weights = fopen(argv[1], "r");
   FILE *article = fopen(argv[2], "r");
 
-  initializeTracking(weights);
+  initTrackingArrays(weights);
   readText(article);
   int x = 0;
   while(x < totalWords){
@@ -39,11 +39,11 @@ int main(int argc, char **argv) {
   return 0;
 }
 
-void initializeTracking(FILE *weights) {
+void initTrackingArrays(FILE *weights) {
   int i, y;
   char *tempString;
 
-  // Initialize tracking arrays
+  // Initialize tracking arrays to 0 or null
   for(i = 0; i < MAXWORDSTRACKED; i++) {
     for(y = 0; y < MAXWORDSIZE; y++) {
       trackingStrings[i][y] = '\0';
@@ -58,7 +58,6 @@ void initializeTracking(FILE *weights) {
       &weightVector[totalWords][1],
       &weightVector[totalWords][2]) == 4)  {
       totalWords++;
-      i++;
   }
 }
 
@@ -77,7 +76,7 @@ void readText(FILE *file){
 
   i = 0;
   while(i <= totalWords){
-    trackingVector[i] = 0;
+    trackingVector[i] = 0;  // initialize all to 0 (false)
     i++;
   }
 

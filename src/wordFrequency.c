@@ -21,15 +21,7 @@ int wordsTracked = 0;						// current count of words in tracked array
 
 // list of words to ignore
 const char * ignored[] = {
-    // "the", "is", "for", "on",
-    // "to",
-    // "of",
-    // "and",
-    // "i",
-    // "a",
-    // "in",
-    // "that",
-    // "s"
+    "the", "to","and", "a", "an"
 };
 
 int main(int argc, char **argv) {	

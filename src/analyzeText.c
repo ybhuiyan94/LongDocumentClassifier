@@ -147,6 +147,7 @@ void predict() {
   double moneyScore = 0;
   double politicsScore = 0;
   double sportsScore = 0;
+  double sum;
 
   for(x = 0; x < totalWords; x++) {
     moneyScore += (double) trackingVector[x] * weightVector[x][0];
@@ -154,9 +155,11 @@ void predict() {
     sportsScore += (double) trackingVector[x] * weightVector[x][2];
   }
 
-  printf("Money: %lf\n", moneyScore);
-  printf("Politics: %lf\n", politicsScore);
-  printf("Sports: %lf\n", sportsScore);
+  sum = moneyScore + politicsScore + sportsScore;
+
+  printf("Money: %lf\n", moneyScore/sum);
+  printf("Politics: %lf\n", politicsScore/sum);
+  printf("Sports: %lf\n", sportsScore/sum);
 
   // moneyScore = sigmoid(moneyScore);
   // politicsScore = sigmoid(politicsScore);

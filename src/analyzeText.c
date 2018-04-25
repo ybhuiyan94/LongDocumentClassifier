@@ -57,10 +57,6 @@ void initializeTracking(FILE *weights) {
       &weightVector[totalWords][0], 
       &weightVector[totalWords][1],
       &weightVector[totalWords][2]) == 4)  {
-    printf("%s %lf %lf %lf\n", &trackingStrings[totalWords],
-      weightVector[totalWords][0], 
-      weightVector[totalWords][1],
-      weightVector[totalWords][2]);
       totalWords++;
       i++;
   }

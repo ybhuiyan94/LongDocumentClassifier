@@ -74,7 +74,8 @@ void readFreqFile(FILE *in, int category) {
   }
 }
 
-// for each weight, frequencyInCategory/totalFrequencu
+// for each weight, frequencyInCategory/totalFrequency
+// PROPORTIONAL
 void calculateWeights() {
 	int i, y;
 	double sum;
@@ -92,6 +93,31 @@ void calculateWeights() {
 		}
 	}
 }
+
+// // for each weight, frequencyInCategory/totalFrequency
+// // EVEN SPLIT
+// void calculateWeights() {
+// 	int i, y;
+// 	int found[CATEGORYCOUNT];
+// 	int sum;
+
+// 	for(i = 0; i < totalWords; i++) {
+// 		for(y = 0; y < CATEGORYCOUNT; y++) {
+// 			if(weightVector[i][y] > 0.0) {
+// 				found[y] = 1;
+// 			} else {
+// 				found[y] = 0;			
+// 			}
+// 		}
+
+// 		sum = found[0] + found[1] + found[2];
+
+// 		// calculate each weight
+// 		for(y = 0; y < CATEGORYCOUNT; y++) {
+// 			weightVector[i][y] = (double) found[y]/ (double) sum;
+// 		}
+// 	}
+// }
 
 void writeFile(){
 	FILE *out = fopen("weights.txt", "w+");

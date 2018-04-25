@@ -9,6 +9,7 @@
 void initArrays();
 void readFreqFile(FILE *in, int category);
 void calculateWeights();
+void writeFile();
 
 char trackingStrings[MAXWORDSTRACKED][MAXWORDSIZE];
 double weightVector[MAXWORDSTRACKED][CATEGORYCOUNT];
@@ -23,9 +24,11 @@ int main(int argc, char **argv) {
 	for(i = 1; i <= CATEGORYCOUNT; i++){	// read each file
 		in = fopen(argv[i], "r");
 		readFreqFile(in, i-1);
+		fclose(in);
 	}
 
 	calculateWeights();
+	writeFile();
 }
 
 // put strings in string array, frequencies in weightVector
@@ -86,10 +89,18 @@ void calculateWeights() {
 		// calculate each weight
 		for(y = 0; y < CATEGORYCOUNT; y++) {
 			weightVector[i][y] = weightVector[i][y] / sum;
-			printf("%lf", weightVector[i][y]);
 		}
-		printf("\n");
-
 	}
+}
 
+void writeFile(){
+	FILE *out = fopen("weights.txt", "w+");
+	int i, y;
+
+	for(i = 0; i < totalWords; i++) {
+    	fprintf(out, "%s %lf %lf %lf\n", &trackingStrings[i],
+    	 weightVector[i][0], weightVector[i][3] ,weightVector[i][2]);
+    }
+
+  fclose(out);
 }

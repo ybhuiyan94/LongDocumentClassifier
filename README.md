@@ -12,10 +12,11 @@ To run the program:
 "analyzeControlGroup.sh".
 	+ A file named "weights.txt" will be created
 
-- Finally, enter the command:
+- Finally, enter the following command:
+	+ "filename" is the file to be analyzed.
+	+ "weights.txt" can be changed to accept other weight files.
 ```
 	./analyzeText weights.txt filename
 ```
-	+ "filename" is the file to be analyzed.
-	+ "weights.txt" can be changed to accept other weight files.
+	
 

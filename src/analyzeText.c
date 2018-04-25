@@ -12,6 +12,7 @@ void initTrackingArrays(FILE *weights);
 void readText(FILE *article);
 int isLetter(char c);
 void wordFound(char* word);
+void predict();
 
 char trackingStrings[MAXWORDSTRACKED][MAXWORDSIZE];
 int trackingVector[MAXWORDSTRACKED];
@@ -24,20 +25,13 @@ int main(int argc, char **argv) {
   FILE *article = fopen(argv[2], "r");
 
   initTrackingArrays(weights);
-  close(weights);
-  readText(article);
-  close(article);
+  fclose(weights);
 
-  int x = 0;
-  while(x < totalWords){
-    printf("%s %d %lf %lf %lf\n", &trackingStrings[x],
-      trackingVector[x],
-      weightVector[x][0], 
-      weightVector[x][1],
-      weightVector[x][2]);
-    x++;
-  }
-  
+  readText(article);
+  fclose(article);
+
+  predict();
+
   return 0;
 }
 
@@ -142,9 +136,22 @@ void wordFound(char* word) {
     x++;
   }
 }
-   
- 
-//multiplication of 2nd and 3rd array 
- 
-//get the sum 
+
+void predict() {
+  int x;
+  double moneyScore = 0;
+  double politicsScore = 0;
+  double sportsScore = 0;
+
+  for(x = 0; x < totalWords; x++) {
+    moneyScore += (double) trackingVector[x] * weightVector[x][0];
+    politicsScore += (double) trackingVector[x] * weightVector[x][1];
+    sportsScore += (double) trackingVector[x] * weightVector[x][2];
+  }
+
+  printf("Money: %lf\n", moneyScore);
+  printf("Politics: %lf\n", politicsScore);
+  printf("Sports: %lf\n", sportsScore);
+
+}
  

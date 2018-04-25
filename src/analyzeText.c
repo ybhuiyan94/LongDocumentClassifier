@@ -24,7 +24,10 @@ int main(int argc, char **argv) {
   FILE *article = fopen(argv[2], "r");
 
   initTrackingArrays(weights);
+  close(weights);
   readText(article);
+  close(article);
+
   int x = 0;
   while(x < totalWords){
     printf("%s %d %lf %lf %lf\n", &trackingStrings[x],
@@ -34,6 +37,7 @@ int main(int argc, char **argv) {
       weightVector[x][2]);
     x++;
   }
+  
   return 0;
 }
 

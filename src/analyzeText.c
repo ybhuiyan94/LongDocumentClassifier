@@ -1,6 +1,7 @@
 #include  <stdio.h> 
 #include <string.h>
 #include <ctype.h>
+#include <math.h>
 
 
 #define BUFFERSIZE 999999 // # of characters to be read from each file
@@ -13,11 +14,13 @@ void readText(FILE *article);
 int isLetter(char c);
 void wordFound(char* word);
 void predict();
+double sigmoid(double score);
 
 char trackingStrings[MAXWORDSTRACKED][MAXWORDSIZE];
 int trackingVector[MAXWORDSTRACKED];
 double weightVector[MAXWORDSTRACKED][CATEGORYCOUNT];
 int totalWords = 0;
+int articleWords = 0;
  
 //Declaring Variables.
 int main(int argc, char **argv) { 
@@ -125,12 +128,14 @@ int isLetter(char c) {
   return 0;
 }
 
-// if we are tracking that word set its status to 1 (true)
+// if we are tracking that word increment its count
 void wordFound(char* word) {
   int x = 0;
+
+  articleWords++;
   while(x < totalWords){
     if(strcmp(word, trackingStrings[x]) == 0) {
-      trackingVector[x]  = 1;
+      trackingVector[x]++;
       break;
     }
     x++;
@@ -153,5 +158,30 @@ void predict() {
   printf("Politics: %lf\n", politicsScore);
   printf("Sports: %lf\n", sportsScore);
 
+  // moneyScore = sigmoid(moneyScore);
+  // politicsScore = sigmoid(politicsScore);
+  // sportsScore = sigmoid(sportsScore);
+
+  // printf("Money: %lf\n", moneyScore);
+  // printf("Politics: %lf\n", politicsScore);
+  // printf("Sports: %lf\n", sportsScore);
+
+}
+
+// x/sqrt(1+x^2)
+double sigmoid(double score) {
+  int wordsFound = 0;
+  int i;
+
+  for(i = 0; i < totalWords; i++) {
+    if(trackingVector[i] > 0){
+      wordsFound += trackingVector[i];
+    }
+  }
+  score = score*(double)wordsFound/(double)articleWords;
+
+  score = score/sqrt(1+score*score);
+
+  return score;
 }
  

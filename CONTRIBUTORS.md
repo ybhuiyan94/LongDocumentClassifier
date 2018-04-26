@@ -8,5 +8,6 @@ Project contributors
   * Computational logic and statistics
   
 * **[Riyazh Dholakia](https://github.com/riyazhdholakia)**
+  * Implemented Classification Framework
 * **[Kevin Nong](https://github.com/knong1)**
   * Implemented Classification Framework

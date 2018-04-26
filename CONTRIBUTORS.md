@@ -6,3 +6,7 @@ Project contributors
   * Scripts to build and run project
   * Project and file structure
   * Computational logic and statistics
+  
+* **[Riyazh Dholakia](https://github.com/riyazhdholakia)**
+
+  * ....

@@ -15,3 +15,5 @@ Project contributors
 * **[Kevin Nong](https://github.com/knong1)**
 
   * Implemented Classification Framework
+  
+ * **[Ashanti]

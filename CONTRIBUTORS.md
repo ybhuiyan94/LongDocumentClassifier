@@ -8,8 +8,10 @@ Project contributors
   * Computational logic and statistics
   
 * **[Riyazh Dholakia](https://github.com/riyazhdholakia)**
+
   * Implemented logic and weights
   * Research and analysis of control group
   
 * **[Kevin Nong](https://github.com/knong1)**
+
   * Implemented Classification Framework

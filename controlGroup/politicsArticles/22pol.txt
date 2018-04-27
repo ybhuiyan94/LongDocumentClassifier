@@ -1,0 +1,38 @@
+Study: People with less political knowledge think they know a lot about politics
+By ERIC W. DOLAN  April 16, 2018
+People who know less about politics are more confident about their political knowledge, according to research published in the scientific journal Political Psychology. The new study found that this effect was exacerbated when partisan identities were activated.
+
+“The Dunning-Kruger effect holds that individuals with little knowledge about a topic will be, paradoxically, the most confident that they know a lot about the topic. Knowledgeable individuals will also discount their knowledgeability,” explained study author Ian Anson, an assistant professor at the University of Maryland, Baltimore County.
+“I became increasingly interested in the Dunning-Kruger effect after observing other scholars discuss the subject on Twitter in the run-up to the 2016 election. I follow a number of political psychologists who marveled at the social media pundit class’ seeming display of ‘Dunning-Krugerish tendencies’ in their bombastic coverage of the election.”
+
+“Many of these scholars’ posts were assuredly somewhat tongue-in-cheek; after all, the idea that someone is ‘ignorant of their own ignorance’ is a pretty serious accusation when used in the political arena,” Anson told PsyPost. “At some point after the election, several individuals began referring to Trump’s presidency as the ‘Dunning-Kruger Presidency’, as Trump appears to opine incredibly confidently about topics he appears to know little about.”
+
+“While scrolling through these kinds of references to the effect, I was struck with the realization that I had read few, if any, references to Dunning-Kruger phenomena in published political science literature. At that point I began to devise a method to apply the theory to the subject of political knowledgeability, while also confronting the paradigm of partisan motivated reasoning. The latter theory constitutes a central topic in my earlier research, and I was especially interested in whether the partisan mind is susceptible to overconfident self-appraisals of political knowledge.”
+
+For his study, Anson examined 2,606 American adults using two online surveys.
+
+He evaluated the knowledge of the participants by quizzing them regarding the number of years served by a senator, the name of the current Secretary of Energy, the party with more conservative positions regarding health care, the political party currently in control of the House of Representatives, and which of four programs the U.S. federal government spends the least on.
+
+Most of the participants performed poorly on the political quiz — and those who performed worse were more likely to overestimate their performance.
+
+“Many Americans appear to be extremely overconfident in their political knowledgeability, because they have no way of knowing how little they actually know about the world of politics (this is the so-called ‘double bind of incompetence’). But there’s a catch: when Republicans and Democrats engage in partisan thought processes, this effect becomes even stronger than before,” Anson explained.
+
+“Partisans with modest factual knowledge about politics become even more convinced that they are savvier than average when they reflect on a world full of members of the opposite party. In fact, when I asked partisans to ‘grade’ political knowledge quizzes filled out by fictional members of the other party, low-skilled respondents gave out scores that reflected party biases much more than actual knowledge.”
+
+“The results seem to indicate the existence of a widespread failure of political discourse in the United States: when a partisan talks to someone of the out-party, they are pretty likely to misjudge the political knowledgeability of themselves and their conversation partner. More often than not, this means that partisans will think of themselves as far more politically knowledgeable than an out-partisan, even when that person is extremely politically knowledgeable,” Anson told PsyPost.
+
+“I think this has major implications for the breakdowns in political discourse we often observe in contemporary American democracy.”
+
+The study, like all research, has limitations.
+
+“This study was conducted in an online survey setting, meaning that I was unable to actually assess what happens when partisans converse with one another. To support the conclusions I drew in the study, I gave respondents a simple political knowledge quiz, and then asked them to tell me how well they thought they did,” Anson said.
+
+“I also had them ‘grade’ the scores of fictional peers on the same knowledge quiz. Obviously this is a very artificial way to assess someone’s political knowledgeability (and their confidence therein), though it is quite similar to most of the existing applications of the Dunning-Kruger effect. In the future, I think that we could learn many interesting things about political discourse and ‘political overconfidence’ by getting people into a laboratory setting.”
+
+Anson realized that he too was subject to the effect while conducting the study.
+
+“Conducting this study was a strange, self-referential experiment in the Dunning-Kruger effect. Re-reading the literature on the subject made me acutely aware of my own (lack of) knowledge of the subject, such that I started to seriously second-guess my confidence! It was interesting to read in one of the seminal Dunning-Kruger studies that the authors included a footnote corroborating basically the same experience,” he explained.
+
+“Perhaps this is also the result of the ‘academic impostor syndrome’, a phenomenon which is assuredly related to Dunning-Kruger, but I feel very grateful and relieved to see the article receiving some early positive feedback. Hopefully I can continue to steer clear of the ‘double bind of incompetence’ in my future studies!”
+
+The study was titled: “Partisanship, Political Knowledge, and the Dunning-Kruger Effect“.

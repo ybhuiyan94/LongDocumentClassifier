@@ -1,0 +1,21 @@
+Google Parent Alphabet Beats Q1 Earnings Expectations With Over $31 Billion Revenue, Reveals Nest Losses
+By Janko Roettgers
+Google’s corporate parent Alphabet surpassed analysts’ expectations for its fiscal first quarter, which ended on March 31. The company also revealed that its Nest smart home unit lost $621 million in 2017.
+
+“We delivered ongoing strong revenue growth,” said Google and Alphabet CFO Ruth Porat during the company’s earnings call Monday.
+
+Alphabet generated some $31.15 billion in revenue during Q1 of 2018, compared to $24.75 billion in revenue during the same quarter a year ago. The company’s net income for the quarter was $9.4 billion, compared to $5.43 billion last year. This translates to adjusted earnings of $13.33 per share, compared to $7.71 for Q1 of 2017.
+
+Analysts had expected revenue of $30.31 billion, and earnings of $9.31 per share. Alphabet’s stock gained $17.55, or 1.64%, in after-hours trading directly following the earnings release, but was subsequently down 0.5% as executives detailed significant investments across hardware and other emerging businesses.
+
+One tidbit revealed in the earnings is the money Google has been making with Nest. The company’s smart home unit previously operated as a separate company under the Alphabet umbrella, with Google including its revenue and losses in its “other bets” segment that also consists of Google’s internet access business as well as moonshots like self-driving cars and biotech.
+However, Alphabet folded Nest back into Google in recent months to more closely align it with its Google Home speakers and other smart home efforts. To account for this change, the company restated all of 2017’s earnings with Nest as part of Google. Based on this information, we now know that Nest generated a total of $726 million in revenue in 2017, while losing some $621 million.
+
+Google CEO Sundar Pichai didn’t say how many devices Nest sold in the past, but revealed that its business is growing. “In 2017, they sold more devices than in the previous two years combined,” he said.
+However, we still won’t exactly know how much Nest will make going forward: After previously lumping it into the “other bets” category, the company is now including it in “Google other revenues,” which includes hardware sales, cloud services, and subscriptions — basically anything that doesn’t involve advertising. Altogether, this part of Google’s business now generates about 16% of the company’s revenue, which means that 84% of its revenue still comes from advertising.
+
+Pichai also once again called out YouTube as a key revenue driver for the company, and said that Google was investing in new content, including live-streams. He singled out YouTube’s Coachella live-stream as one recent success story, saying that it was viewed over 41 million times. “Beyonce was the most-viewed live performance ever on YouTube,” Pichai said.
+
+YouTube has been in the headlines once again this week for placing ads against questionable content. Pichai didn’t directly refer to these issues, but said that the company was working on improving its filters for inappropriate content. He said that over 6 million videos reviewed in Q4 were flagged by machine-learning algorithms, with computers catching 70% of these videos before they had been viewed a single time.
+
+Asked about new European privacy rules, Pichai said that the company expected to be ready for the implementation of the GDPR next month. “We started working on GDPR compliance over 18 months ago,” he said. “It’s really important and we care about getting it right.” He added that the company was committed to bringing new privacy controls to consumers worldwide.

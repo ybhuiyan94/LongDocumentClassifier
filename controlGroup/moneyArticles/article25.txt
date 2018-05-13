@@ -1,0 +1,68 @@
+How mobile money could help the world's poor
+Digital cash from PayPal, Mastercard and cryptocurrency startups have the potential to break the cycle of poverty
+This story is part of "Follow the Money," a look at how digital cash is changing the way we save, shop and work.
+
+John Kunze walked into a check-cashing store along Lexington Avenue in Manhattan a few months ago. It had red neon signs in the windows, cold fluorescent lights and a loop of muzak piping through the speakers. He wasn't impressed.
+
+The PayPal executive pointed to a wall poster showing the store charged $1 to cash a $25 check, up to $40.60 for $2,000. "That would be kind of neat if we could put checks into PayPal and not charge that number," he says about the higher figure.
+
+Kunze hit on a reality that billions of people worldwide know too well: Being poor can cost you a lot of money. About 2 billion people, including an estimated 9 million US households, don't  have bank accounts or access to a financial institution. According to the World Bank, about 20 percent of these "unbanked" adults get their wages and pay their bills in cash. That's risky and makes it harder to save, two reasons the Gates Foundation sees digital money -- which can be received and transferred using even the simplest feature phones -- as key to helping break the cycle of poverty.
+
+Now payments and tech heavyweights including PayPal, Mastercard, Amazon and Samsung, along with a growing list of financial tech startups, are working to offer more banklike services -- including apps, mobile systems and cryptocurrencies -- to those often ignored by traditional banks. But providing new financial services to those who never had them comes with challenges.
+Tech companies will have to educate people on the basics of these payment systems, such as remembering a PIN and how they can deposit, withdraw and send money, the World Bank says. Companies will also have to shell out the upfront costs for a reliable payments infrastructure, or few will use it. And they'll have to prove to consumers that their services are trustworthy and safe. Kenya's M-Pesa mobile money system shows it can be done. 
+
+Launched 11 years by Safaricom, the country's largest mobile telecom operator, M-Pesa is now used by more than two-thirds of Kenya's adults. M-Pesa offers a glimpse of how other systems could work. In Kenya, you simply hand cash to one of Safaricom's agents (often in the same shop selling airtime), who credits that money to your M-Pesa account. Transferring money is as simple as calling up a menu on your feature phone.
+
+"I think the [unbanked] numbers will go down, but how we judge them will change as well," says Mike Elliott, a Mastercard executive focused on giving more people access to payment and money transfer tools, often referred to financial inclusion. But access is just the first step, he says. How an account will actually be used will be even more important.
+
+Unbanked in Africa
+Elliott oversees a Mastercard lab in Nairobi, Kenya, that's funded by the Gates Foundation. There, the 22-person team prototypes and commercializes financial products for the developing world. The scale of the mission is huge, since about 85 percent of transactions worldwide are still done in cash.
+
+One of these efforts is called Kionect, a new way mom-and-pop shopkeepers in Kenya can buy supplies via text messages on their feature phones. Used by 1,500 retailers, the system helps shops build up financial histories they can then use to gain access to credit, loans and insurance.
+"People are really familiar with cash, and that's the challenge for us," says Elliott. "People don't wake up in the morning saying, 'I really want to make a digital payment.'"
+
+Then there's Samsung's Contactless Companion Platform, or CCP. Introduced last year, the system uses NFC technology that lets a phone, wearable or key fob make small digital payments.
+
+Samsung initially viewed the system as a way to help adults in Europe and the US give their kids some pocket money. But the Germany-based engineers who designed it -- all with bank accounts, credit cards and smartphones -- didn't anticipate how far this idea would resonate.
+
+"Over the last 12 months, we've received inquiries from all over the world," Samsung's Thomas Arenz says.
+
+Samsung ran a pilot program in East Africa, where mobile money networks, such as Kenya's M-Pesa, are already widely used. Two more pilots -- one in the Bahamas dubbed "Island Pay," and another in Central America -- are set to kick off in the coming months.
+
+Crypto for all
+Cryptocurrencies like bitcoin offer another option for serving the world's unbanked.
+
+Sebastian Serrano, CEO and co-founder of Ripio in Argentina, is on the forefront of this effort. 
+Ripio offers a mobile bitcoin wallet and a cryptocurrency-based loan network in Argentina and Brazil, countries where banking and credit customers pay high interest rates, have fewer banking options and struggle with unstable currencies, he says.
+
+"Our mission is to give access to this new network of bitcoin and other cryptocurrencies, and use it as a tool for financial inclusion," Serrano says.
+
+Similar to Prosper or Lending Club, Serrano's company allows regular folks to lend money using cryptocurrencies that are converted to Ripio's own digital coin, called RCN, and converted again into a local currency. The process allows Ripio to offer the service to lenders all over the world, not just local markets.
+
+Sure, people from countries with a stable currency may scoff at investing their nest eggs in bitcoin. But Serrano says that, despite its own volatility, virtual currency can be a safer bet than the Argentine peso, which suffers from rapid inflation and repeated collapse.
+
+"You know for sure it will lose value," he said of the peso. "There is an outlook for bitcoin to appreciate."
+Greta Bull, a director at the World Bank and CEO of the Consultative Group to Assist the Poor, disagrees. She doesn't think bitcoin is the right tool for enable financial inclusion.
+
+"If you look at markets like Africa, you still have to get cash in and out of the system," she says. "People can't go and buy feed for their cattle using bitcoin."
+
+Others are using bitcoin's underlying technology, called blockchain, to offer new financial tools. Take Bitt, a startup in Barbados that has created a merchant network of 240 retail sites on the island nation. People can use this network to load Barbados dollars into a digital cash account, accessible through Bitt's free app. They can then use the app to pay utility bills or purchase something from a retailer in Bitt's network. Bitt charges retailers 1 percent for digital transactions, roughly half of what Visa and Mastercard charge, says Bitt CEO Rawdon Adams.
+
+Both Bitt and Ripio use blockchain to cut out middlemen and costs. The software distributes information across multiple computers and hard-wires trust into transactions, reducing the need for more expensive payment networks.
+itt also lets customers buy and sell bitcoin, but for regulatory reasons doesn't allow retail sales using the cryptocurrency.
+
+"We want to offer something like a bank on a phone," Adams says. "I don't think anything will displace cash in this region. But it's faster, cheaper and more secure than cash in many cases."
+
+Digital inclusion
+PayPal's Kunze didn't mention it at the check-cashing store, but his company was already developing a new digital check cashing feature.
+Earlier this month he said PayPal started testing the service, which charges 1 percent per deposit -- about half the fee charged by the check-cashing place -- or free with direct deposit.
+
+PayPal  is also testing a prepaid card from Mastercard.
+
+Amazon, too, created a way for more customers to shop on its website, launching Amazon Cash. The service lets people instantly add money to their Amazon accounts when visiting more than 10,000 US retail locations. PayPal offers a similar service at more 20,000 stores.
+
+"Our job isn't to put these alternative financial service providers out of business," Kunze says about check-cashing businesses. "It's to provide customers with more options."
+
+Bull from the World Bank argues that "technology is the easy part." Simply telling people their lives will be better if they embrace these new services doesn't always work.
+
+"Behavior change sometimes requires a bit of a jolt," she says. 

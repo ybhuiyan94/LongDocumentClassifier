@@ -16,4 +16,3 @@ Project contributors
 
   * Implemented Classification Framework
   
- * **[Ashanti]
